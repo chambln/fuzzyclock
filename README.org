@@ -22,3 +22,9 @@ ten past seven
 five to nine
 twenty-five to ten
 #+END_SRC
+
+Particularly useful in composition with date(1):
+
+#+BEGIN_SRC sh
+date +%T | fuzzyclock
+#+END_SRC
