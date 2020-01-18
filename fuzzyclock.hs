@@ -32,7 +32,9 @@ fuzz (h, m) = showMinute m' ++ showHour h'
 parse :: String -> (Double, Double)
 parse x = (read h, read m)
   where h = takeWhile (/=':') x
-        m = tail $ dropWhile (/=':') x
+        m = if ':' `elem` x
+            then takeWhile (/=':') $ tail $ dropWhile (/=':') x
+            else "0"
 
 main = interact $ concat
                 . map (unlines . map (fuzz . parse) . words)
