@@ -3,6 +3,15 @@
 Fuzzyclock is a simple utility that describes digital clock times in
 an approximate and conversational way.
 
+** Installation
+
+You will need GHC to compile this.
+
+#+BEGIN_SRC sh
+make
+sudo make install
+#+END_SRC
+
 ** Usage
 
 Times are read from standard input and should be separated by
