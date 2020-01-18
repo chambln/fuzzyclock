@@ -1,0 +1,24 @@
+* Fuzzyclock
+
+Fuzzyclock is a simple utility that describes digital clock times in
+an approximate and conversational way.
+
+** Usage
+
+Times are read from standard input and should be separated by
+whitespace.
+
+#+BEGIN_SRC
+$ echo 8:39 | fuzzyclock
+twenty to nine
+$ echo 15:22:57 | fuzzyclock
+twenty past three
+$ echo 0 | fuzzyclock
+twelve
+$ echo 25:13 | fuzzyclock
+quarter past one
+$ echo 19:10 20:53 21:36 | fuzzyclock
+ten past seven
+five to nine
+twenty-five to ten
+#+END_SRC
