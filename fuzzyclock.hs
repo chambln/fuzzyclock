@@ -36,6 +36,7 @@ parse x = (read h, read m)
             then takeWhile (/=':') $ tail $ dropWhile (/=':') x
             else "0"
 
+main :: IO ()
 main = interact $ concat
                 . map (unlines . map (fuzz . parse) . words)
                 . lines
